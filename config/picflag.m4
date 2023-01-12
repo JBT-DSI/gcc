@@ -31,7 +31,7 @@ case "${$2}" in
 	# Interix 3.x gcc -fpic/-fPIC options generate broken code.
 	# Instead, we relocate shared libraries at runtime.
 	;;
-    i[[34567]]86-*-nto-qnx*)
+    i[[34567]]86-*-nto-qnx* | x86_64-*-nto-qnx*)
 	# QNX uses GNU C++, but need to define -shared option too, otherwise
 	# it will coredump.
 	$1='-fPIC -shared'

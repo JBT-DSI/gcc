@@ -219,7 +219,7 @@ case "${host}" in
     fi
     AC_CHECK_FUNCS(aligned_alloc posix_memalign memalign _aligned_malloc)
     ;;
-  *-qnx6.1* | *-qnx6.2*)
+  *-qnx6.1* | *-qnx6.2* | *-qnx7.1*)
     SECTION_FLAGS='-ffunction-sections -fdata-sections'
     AC_SUBST(SECTION_FLAGS) 
     GLIBCXX_CHECK_LINKER_FEATURES

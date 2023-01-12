@@ -66306,7 +66306,7 @@ fi
 done
 
     ;;
-  *-qnx6.1* | *-qnx6.2*)
+  *-qnx6.1* | *-qnx6.2* | *-qnx7.1*)
     SECTION_FLAGS='-ffunction-sections -fdata-sections'
 
 
