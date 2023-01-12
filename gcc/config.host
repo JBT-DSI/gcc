@@ -84,7 +84,7 @@ case ${host} in
  | i[34567]86-go32-* \
  | i[34567]86-*-go32* \
  | vax-*-vms*)
-    echo "*** Configuration for host ${host} not supported" 1>&2
+    echo "config.host *** Configuration for host ${host} not supported" 1>&2
     exit 1
     ;;
 esac

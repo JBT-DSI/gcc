@@ -866,8 +866,7 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
     operator=(const ios_base&) = delete;
 
   protected:
-    void
-    _M_move(ios_base&) noexcept;
+    void _M_move(ios_base& __rhs) noexcept;
 
     void
     _M_swap(ios_base& __rhs) noexcept;

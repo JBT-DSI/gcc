@@ -57,6 +57,9 @@ extern int errno;
 #endif
 #ifdef HAVE_PROCESS_H
 #include <process.h>
+#ifndef _P_NOWAITO
+#define _P_NOWAITO P_NOWAITO
+#endif
 #endif
 
 #ifdef vfork /* Autoconf may define this to fork for us. */

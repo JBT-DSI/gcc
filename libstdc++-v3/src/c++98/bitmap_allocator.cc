@@ -46,7 +46,7 @@ _GLIBCXX_BEGIN_NAMESPACE_VERSION
 
   size_t*
   free_list::
-  _M_get(size_t __sz) throw(std::bad_alloc)
+  _M_get(size_t __sz) _GLIBCXX_THROW(std::bad_alloc)
   {
 #if defined __GTHREADS
     __mutex_type& __bfl_mutex = _M_get_mutex();

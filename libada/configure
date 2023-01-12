@@ -3098,6 +3098,11 @@ case "${host}" in
 	# it will coredump.
 	PICFLAG='-fPIC -shared'
 	;;
+    x86_64-*-nto-qnx*)
+	# QNX uses GNU C++, but need to define -shared option too, otherwise
+	# it will coredump.
+	PICFLAG='-fPIC -shared'
+	;;
     i[34567]86-pc-msdosdjgpp*)
 	# DJGPP does not support shared libraries at all.
 	;;

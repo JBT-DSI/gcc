@@ -12,6 +12,25 @@
 ## M4sh Initialization. ##
 ## -------------------- ##
 
+CMAKE_SYSTEM_VERSION=7.1.0
+CMAKE_SYSTEM_PROCESSOR=x86_64
+CMAKE_SYSTEM_PREFIX=${CMAKE_SYSTEM_PROCESSOR}-pc-nto-qnx${CMAKE_SYSTEM_VERSION}
+AR=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-ar
+RANLIB=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-ranlib
+NM=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-nm
+OBJCOPY=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-objcopy
+OBJDUMP=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-objdump
+STRIP=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-strip
+LD=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-ld
+CC=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-gcc
+CXX=${QNX_HOST}/usr/bin/${CMAKE_SYSTEM_PREFIX}-g++
+GFORTRAN_FOR_TARGET=${CMAKE_SYSTEM_PREFIX}-gfortran
+CPPFLAGS="-O2 -DNDEBUG -msse "
+CXXFLAGS="-O2 -DNDEBUG -msse -std=gnu++11 -I${QNX_TARGET}/usr/include/c++/8.3.0/x86_64-pc-nto-qnx7.1.0"
+
+#enable_language(Fortran)
+#set(CMAKE_Fortran_COMPILER ${QNX_HOST}/${CMAKE_SYSTEM_PROCESSOR}/usr/bin/${CMAKE_SYSTEM_PREFIX}-gfortran)
+
 # Be more Bourne compatible
 DUALCASE=1; export DUALCASE # for MKS sh
 if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then :
@@ -5341,7 +5360,8 @@ esac
 # When bootstrapping with GCC, build stage 1 in C++98 mode to ensure that a
 # C++98 compiler can still start the bootstrap.
 if test "$enable_bootstrap:$GXX" = "yes:yes"; then
-  CXX="$CXX -std=gnu++98"
+#  CXX="$CXX -std=gnu++98"
+  CXX="$CXX -std=gnu++11"
 fi
 
 # Used for setting $lt_cv_objdir
