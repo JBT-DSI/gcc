@@ -6297,7 +6297,7 @@ ia64-*-hpux*)
   ;;
 
 x86_64-*kfreebsd*-gnu|x86_64-*linux*|powerpc*-*linux*| \
-s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
+s390*-*linux*|x86_64-*-nto-qnx*|s390*-*tpf*|sparc*-*linux*)
   # Find out which ABI we are using.
   echo 'int i;' > conftest.$ac_ext
   if { { eval echo "\"\$as_me\":${as_lineno-$LINENO}: \"$ac_compile\""; } >&5
@@ -6340,7 +6340,7 @@ s390*-*linux*|s390*-*tpf*|sparc*-*linux*)
 	  x86_64-*kfreebsd*-gnu)
 	    LD="${LD-ld} -m elf_x86_64_fbsd"
 	    ;;
-	  x86_64-*linux*)
+	  x86_64-*linux*|x86_64-*-nto-qnx*)
 	    LD="${LD-ld} -m elf_x86_64"
 	    ;;
 	  powerpcle-*linux*)

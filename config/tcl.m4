@@ -1762,7 +1762,7 @@ dnl AC_CHECK_TOOL(AR, ar)
 	    fi
 
 	    ;;
-	QNX-6*)
+	QNX-6* | QNX-7*)
 	    # QNX RTP
 	    # This may work for all QNX, but it was only reported for v6.
 	    SHLIB_CFLAGS="-fPIC"
